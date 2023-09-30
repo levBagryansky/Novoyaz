@@ -21,4 +21,10 @@ void flush() {
     window.clear();
 }
 
+bool interrupt() {
+    auto event = sf::Event{};
+    window.pollEvent(event);
+    return event.type == sf::Event::KeyPressed;
+}
+
 #endif //ATOMS_SIM_HPP

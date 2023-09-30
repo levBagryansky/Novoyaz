@@ -52,7 +52,10 @@ void main_() {
         }
     }
 
-    for (int i = 0; i < 60; ++i) {
+    for (int i = 0; i < 900; ++i) {
+        if (interrupt()) {
+            break;
+        }
         for (int x = 0; x < COUNT; ++x) {
             for (int y = 0; y < COUNT; ++y) {
                 putTile(prev[y * COUNT + x]);

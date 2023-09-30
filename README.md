@@ -11,4 +11,4 @@ make run_Atoms
 ```
 The result should be like above:
 
-<img src="Atoms/resources/Atoms.gif" width="250" height="250"/>
+<img src="Atoms/resources/Atoms.gif" width="370"/>

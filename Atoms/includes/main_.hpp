@@ -12,6 +12,8 @@ constexpr int G_finish = 251;
 constexpr int B_finish = 0;
 constexpr int steps = 8;
 
+constexpr int COUNT = 100;
+
 struct RGB {
     int R;
     int G;

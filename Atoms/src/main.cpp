@@ -1,7 +1,8 @@
 #include "main_.hpp"
+#include "sim.hpp"
 
 int main() {
-    window.setFramerateLimit(20);
+    initWindow();
     main_();
     return 0;
 }

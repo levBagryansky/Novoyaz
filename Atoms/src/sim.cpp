@@ -27,3 +27,7 @@ bool interrupt() {
     window.pollEvent(event);
     return event.type == sf::Event::KeyPressed;
 }
+
+int next_rand() {
+    return std::rand();
+}

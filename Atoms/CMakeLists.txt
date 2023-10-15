@@ -7,9 +7,15 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 include_directories(includes)
-add_executable(Atoms src/main.cpp src/sim.cpp)
-target_link_libraries(Atoms PRIVATE sfml-graphics)
-target_compile_features(Atoms PRIVATE cxx_std_17)
+
+add_library(simlib)
+target_sources(simlib PRIVATE
+        src/sim.cpp)
+target_link_libraries(simlib PRIVATE sfml-graphics)
+
+add_executable(Atoms src/main.cpp src/main_.cpp)
+target_link_libraries(Atoms PRIVATE simlib)
+target_compile_features(Atoms PRIVATE cxx_std_20)
 
 add_custom_target(run_Atoms
         COMMAND ../bin/Atoms)

@@ -1,6 +1,3 @@
-#ifndef ATOMS_MAIN__HPP
-#define ATOMS_MAIN__HPP
-
 #include "sim.hpp"
 
 constexpr int R_start = 100;
@@ -33,18 +30,17 @@ void putTile(Tile tile);
 void loadNext(Tile *prev, Tile *next);
 
 void main_() {
-    std::srand(51);
     Tile prev[COUNT * COUNT];
     Tile next[COUNT * COUNT];
     constexpr RGB default_rgb = RGB{
-            .R = R_start,
-            .G = G_start,
-            .B = B_start,
-            .step = 0
+        .R = R_start,
+        .G = G_start,
+        .B = B_start,
+        .step = 0
     };
     for (int x = 0; x < COUNT; ++x) {
         for (int y = 0; y < COUNT; ++y) {
-            if (std::rand() % 50 == 0 && !prev[y * COUNT + x-1].exist) {
+            if (next_rand() % 50 == 0 && !prev[y * COUNT + x-1].exist) {
                 prev[y * COUNT + x].exist = true;
                 prev[y * COUNT + x].x = x;
                 prev[y * COUNT + x].y = y;
@@ -95,10 +91,10 @@ void loadNext(Tile *prev, Tile *next) {
         for (int y = 0; y < COUNT; ++y) {
             if (prev[y * COUNT + x].exist) {
                 int x_next = x; int y_next = y;
-                if (std::rand() % 2) {
-                    x_next = (COUNT + x + (std::rand() % 2) * 2  - 1) % COUNT;
+                if (next_rand() % 2) {
+                    x_next = (COUNT + x + (next_rand() % 2) * 2  - 1) % COUNT;
                 } else {
-                    y_next = (COUNT + y + (std::rand() % 2) * 2 - 1) % COUNT;
+                    y_next = (COUNT + y + (next_rand() % 2) * 2 - 1) % COUNT;
                 }
                 int i = y_next * COUNT + x_next;
                 bool existed = next[i].exist;
@@ -108,7 +104,7 @@ void loadNext(Tile *prev, Tile *next) {
                 next[i].y = y_next;
                 if (existed) {
                     next[i].rgb = nextRGB(
-                            rgb_prev.step > next[i].rgb.step ? rgb_prev: next[i].rgb
+                        rgb_prev.step > next[i].rgb.step ? rgb_prev: next[i].rgb
                     );
                 }
             }
@@ -117,5 +113,3 @@ void loadNext(Tile *prev, Tile *next) {
     }
 }
 
-
-#endif //ATOMS_MAIN__HPP

@@ -11,4 +11,6 @@ void flush() ;
 
 bool interrupt() ;
 
+int next_rand();
+
 #endif //ATOMS_SIM_HPP

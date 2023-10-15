@@ -30,8 +30,10 @@ void putTile(Tile tile);
 void loadNext(Tile *prev, Tile *next);
 
 void main_() {
-    Tile prev[COUNT * COUNT];
-    Tile next[COUNT * COUNT];
+    Tile prev_static_arr[COUNT * COUNT];
+    Tile next_static_arr[COUNT * COUNT];
+    Tile* prev = prev_static_arr;
+    Tile* next = next_static_arr;
     constexpr RGB default_rgb = RGB{
         .R = R_start,
         .G = G_start,
@@ -60,7 +62,9 @@ void main_() {
             }
         }
         loadNext(prev, next);
-        std::swap(prev, next);
+        Tile* tmp = prev;
+        prev = next;
+        next = tmp;
         flush();
     }
 }

@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "sim.hpp"
 
 extern void main_();

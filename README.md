@@ -12,3 +12,12 @@ make run_Atoms
 The result should be like above:
 
 <img src="Atoms/resources/Atoms.gif" width="370"/>
+
+## main_ statistic:
+In order to calculate statistic run it from the project dir:
+
+```shell
+python3 MyProfiler/compute_stat.py
+```
+
+![](MyProfiler/resources/Stats.png)

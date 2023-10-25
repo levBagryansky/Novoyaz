@@ -18,7 +18,8 @@ def main() -> int:
     os.chdir("build")
     os.system("make run_Atoms_log")
 
-    plt.rcParams.update({'font.size': 8})
+    plt.rcParams.update({'font.size': 7})
+    plt.figure(figsize=[20, 5], dpi=100)
     table = generateDict(logfile)
 
     print(table)

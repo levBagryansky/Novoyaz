@@ -1,4 +1,4 @@
-#include "sim.hpp"
+#include "../includes/sim.hpp"
 
 constexpr int R_start = 100;
 constexpr int G_start = 100;
@@ -52,7 +52,7 @@ void main_() {
         }
     }
 
-    for (int i = 0; i < 900; ++i) {
+    for (int i = 0; i < 100; ++i) {
         if (interrupt()) {
             break;
         }

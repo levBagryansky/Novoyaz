@@ -20,4 +20,4 @@ In order to calculate statistic run it from the project dir:
 python3 MyProfiler/compute_stat.py
 ```
 
-![](MyProfiler/resources/Stats.png)
+![](MyProfiler/resources/Stats_ins.png)

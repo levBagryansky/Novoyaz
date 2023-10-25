@@ -5,7 +5,7 @@ void funcStartLogger(char* funcName){
 }
 
 void callLogger(char* calleeName, char* callerName, long int valID){
-    printf("[LOG] CALL '%s' -> '%s' {%ld}\n", calleeName, callerName, valID);
+    printf("[CALL] %s\n", calleeName);
 }
 
 void funcEndLogger(char* funcName, long int valID){

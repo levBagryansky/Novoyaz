@@ -27,15 +27,15 @@ namespace {
             // Dump Function
             outs() << "In a function called " << F.getName() << "\n\n";
 
-            for (auto &B : F) {
-                for (auto &I : B) {
-                    // Dump Instructions
-                    outs() << "Instruction: " << (uint64_t)(&I) << "\n";
-                    I.print(outs(), true);
-                    outs() << "\n";
-                }
-                outs() << "\n";
-            }
+//            for (auto &B : F) {
+//                for (auto &I : B) {
+//                    // Dump Instructions
+//                    outs() << "Instruction: " << (uint64_t)(&I) << "\n";
+//                    I.print(outs(), true);
+//                    outs() << "\n";
+//                }
+//                outs() << "\n";
+//            }
 
             // Prepare builder for IR modification
             LLVMContext &Ctx = F.getContext();
@@ -51,24 +51,12 @@ namespace {
             FunctionCallee callLogFunc =
                 F.getParent()->getOrInsertFunction("callLogger", callLogFuncType);
 
-            // Prepare binOptLogger function
-            ArrayRef<Type *> binOptParamTypes = {Type::getInt32Ty(Ctx),
-                                                 Type::getInt32Ty(Ctx),
-                                                 Type::getInt32Ty(Ctx),
-                                                 builder.getInt8Ty()->getPointerTo(),
-                                                 builder.getInt8Ty()->getPointerTo(),
-                                                 Type::getInt64Ty(Ctx)};
-            FunctionType *binOptLogFuncType =
-                FunctionType::get(retType, binOptParamTypes, false);
-            FunctionCallee binOptLogFunc =
-                F.getParent()->getOrInsertFunction("binOptLogger", binOptLogFuncType);
 
-
-            ArrayRef<Type *> operationLoggerParamTypes = {
+            ArrayRef<Type *> operationParamLoggerTypes = {
                 builder.getInt8Ty()->getPointerTo()
             };
             FunctionType *operationParamLoggerType =
-                FunctionType::get(Type::getVoidTy(builder.getContext()), operationLoggerParamTypes, false);
+                FunctionType::get(Type::getVoidTy(builder.getContext()), operationParamLoggerTypes, false);
             FunctionCallee operationParamLoggerFunc = F.getParent()->getOrInsertFunction(
                 "operationLogger", operationParamLoggerType);
 
@@ -85,7 +73,7 @@ namespace {
                 }
             }
 
-            // Insert loggers for call, binOpt and ret instructions
+            // Insert loggers for call
             for (auto &B : F) {
                 for (auto &I : B) {
                     Value *valueAddr =
@@ -104,19 +92,6 @@ namespace {
                             builder.CreateCall(callLogFunc, args);
                         }
                     }
-                    if (auto *op = dyn_cast<BinaryOperator>(&I)) {
-                        // Insert after op
-                        builder.SetInsertPoint(op);
-                        builder.SetInsertPoint(&B, ++builder.GetInsertPoint());
-
-                        // Insert a call to binOptLogFunc function
-                        Value *lhs = op->getOperand(0);
-                        Value *rhs = op->getOperand(1);
-                        Value *funcName = builder.CreateGlobalStringPtr(F.getName());
-                        Value *opName = builder.CreateGlobalStringPtr(op->getOpcodeName());
-                        Value *args[] = {op, lhs, rhs, opName, funcName, valueAddr};
-                        builder.CreateCall(binOptLogFunc, args);
-                    }
                 }
             }
             return true;
@@ -133,5 +108,5 @@ static void registerMyPass(const PassManagerBuilder &,
     PM.add(new MyPass());
 }
 static RegisterStandardPasses
-    RegisterMyPass(PassManagerBuilder::EP_EarlyAsPossible,
+    RegisterMyPass(PassManagerBuilder::EP_OptimizerLast,
                    registerMyPass);

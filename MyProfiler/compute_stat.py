@@ -16,6 +16,7 @@ def main() -> int:
     logfile = "pylog"
     os.system("cmake . -B build/ -DATOMS_PROFILE=1 -DLOG_NAME=" + logfile)
     os.chdir("build")
+    os.system("rm" + logfile)
     os.system("make run_Atoms_log")
 
     plt.rcParams.update({'font.size': 7})
@@ -26,7 +27,7 @@ def main() -> int:
     os.chdir("../")
     plt.title("Number of different instructions")
     plt.bar(table.keys(), table.values())
-    plt.show()
+    #plt.show()
     plt.savefig('MyProfiler/resources/Stats.png')
     return 0
 

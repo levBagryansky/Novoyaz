@@ -14,6 +14,8 @@ The result should be like above:
 <img src="Atoms/resources/Atoms.gif" width="370"/>
 
 ## main_ statistic:
+There is frequency statistic of instructions grouped 1, 2 and 3 in a row.
+
 In order to calculate statistic run it from the project dir:
 
 ```shell

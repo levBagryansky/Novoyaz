@@ -11,7 +11,7 @@ def generateDict(fileName):
             infoDict[line[1]] += 1
         else:
             infoDict[line[1]] = 1
-    return dict(sorted(infoDict.items(), key=lambda item: item[1]))
+    return dict(sorted(infoDict.items(), key=lambda item: item[1], reverse=True)[:12])
 
 
 def generateDictBy2(fileName):
@@ -56,16 +56,18 @@ def main() -> int:
         os.chdir("build")
         os.system("rm" + logfile)
         os.system("make run_Atoms_log")
+        os.chdir("..")
+        logfile = "build/" + logfile
 
     plt.rcParams.update({'font.size': 9})
     plt.figure(figsize=[20, 5], dpi=100)
 
-    table = generateDictBy3(logfile)
+    table = generateDict(logfile)
     print(table)
     plt.title("Number of different instructions")
     plt.bar(table.keys(), table.values())
     # plt.show()
-    plt.savefig('MyProfiler/resources/StatsTriple.png')
+    plt.savefig('MyProfiler/resources/Stats.png')
     return 0
 
 

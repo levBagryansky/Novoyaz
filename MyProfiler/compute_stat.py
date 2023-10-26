@@ -44,7 +44,7 @@ def generateDictBy3(fileName):
             infoDict[compound] = 0
         line1 = line2
         line2 = line3
-    return dict(sorted(infoDict.items(), key=lambda item: item[1], reverse=True)[:18])
+    return dict(sorted(infoDict.items(), key=lambda item: item[1], reverse=True)[:15])
 
 
 def main() -> int:
@@ -65,7 +65,7 @@ def main() -> int:
     plt.title("Number of different instructions")
     plt.bar(table.keys(), table.values())
     # plt.show()
-    plt.savefig('MyProfiler/resources/StatsPair.png')
+    plt.savefig('MyProfiler/resources/StatsTriple.png')
     return 0
 
 

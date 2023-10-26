@@ -22,4 +22,4 @@ python3 MyProfiler/compute_stat.py
 
 ![](MyProfiler/resources/Stats.png)
 ![](MyProfiler/resources/StatsPair.png)
-
+![](MyProfiler/resources/StatsTriple.png)

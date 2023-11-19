@@ -10,10 +10,15 @@ void initWindow(const int limit) {
     window.setFramerateLimit(limit);
 }
 
-void putTile(int x, int y, uint8_t R, uint8_t G, uint8_t B, uint8_t alpha = 255) {
+void putTile(int x, int y, int R, int G, int B, int alpha = 255) {
     sf::RectangleShape rectangle{sf::Vector2f{SHAPE_SIZE, SHAPE_SIZE}};
     rectangle.setPosition(x * SHAPE_SIZE, y * SHAPE_SIZE);
-    rectangle.setFillColor(sf::Color{R, G, B, alpha});
+    rectangle.setFillColor(sf::Color{
+        static_cast<sf::Uint8>(R),
+        static_cast<sf::Uint8>(G),
+        static_cast<sf::Uint8>(B),
+        static_cast<sf::Uint8>(alpha)
+    });
     window.draw(rectangle);
 }
 

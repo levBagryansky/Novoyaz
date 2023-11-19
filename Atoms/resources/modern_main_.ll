@@ -3,584 +3,412 @@ source_filename = "main_.cpp"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
-%struct.RGB = type { i32, i32, i32, i32 }
-%struct.Tile = type { i8, i32, i32, %struct.RGB }
+%struct.Tile = type { i8, i32, i32 }
 
-$_ZN4TileC2Ev = comdat any
-
-@__const._Z5main_v.default_rgb = private unnamed_addr constant %struct.RGB { i32 100, i32 100, i32 100, i32 0 }, align 4
-
-; Function Attrs: mustprogress noinline optnone uwtable
-define dso_local void @_Z5main_v() #0 {
+; Function Attrs: uwtable
+define dso_local void @_Z5main_v() local_unnamed_addr #0 {
   %1 = alloca [10000 x %struct.Tile], align 16
   %2 = alloca [10000 x %struct.Tile], align 16
-  %3 = alloca %struct.Tile*, align 8
-  %4 = alloca %struct.Tile*, align 8
-  %5 = alloca %struct.RGB, align 4
-  %6 = alloca i32, align 4
-  %7 = alloca i32, align 4
-  %8 = alloca i32, align 4
-  %9 = alloca i32, align 4
-  %10 = alloca i32, align 4
-  %11 = alloca %struct.Tile, align 8
-  %12 = alloca %struct.Tile*, align 8
-  %13 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i32 0, i32 0
-  %14 = getelementptr inbounds %struct.Tile, %struct.Tile* %13, i64 10000
-  br label %15
+  %3 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 0, i32 0
+  call void @llvm.lifetime.start.p0i8(i64 120000, i8* nonnull %3) #5
+  %4 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 0
+  %5 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 10000
+  br label %6
 
-15:                                               ; preds = %15, %0
-  %16 = phi %struct.Tile* [ %13, %0 ], [ %17, %15 ]
-  call void @_ZN4TileC2Ev(%struct.Tile* noundef nonnull align 4 dereferenceable(28) %16) #5
-  %17 = getelementptr inbounds %struct.Tile, %struct.Tile* %16, i64 1
-  %18 = icmp eq %struct.Tile* %17, %14
-  br i1 %18, label %19, label %15
+6:                                                ; preds = %6, %0
+  %7 = phi %struct.Tile* [ %4, %0 ], [ %33, %6 ]
+  %8 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 0, i32 0
+  store i8 0, i8* %8, align 4, !tbaa !5
+  %9 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 1, i32 0
+  store i8 0, i8* %9, align 4, !tbaa !5
+  %10 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 2, i32 0
+  store i8 0, i8* %10, align 4, !tbaa !5
+  %11 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 3, i32 0
+  store i8 0, i8* %11, align 4, !tbaa !5
+  %12 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 4, i32 0
+  store i8 0, i8* %12, align 4, !tbaa !5
+  %13 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 5, i32 0
+  store i8 0, i8* %13, align 4, !tbaa !5
+  %14 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 6, i32 0
+  store i8 0, i8* %14, align 4, !tbaa !5
+  %15 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 7, i32 0
+  store i8 0, i8* %15, align 4, !tbaa !5
+  %16 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 8, i32 0
+  store i8 0, i8* %16, align 4, !tbaa !5
+  %17 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 9, i32 0
+  store i8 0, i8* %17, align 4, !tbaa !5
+  %18 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 10, i32 0
+  store i8 0, i8* %18, align 4, !tbaa !5
+  %19 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 11, i32 0
+  store i8 0, i8* %19, align 4, !tbaa !5
+  %20 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 12, i32 0
+  store i8 0, i8* %20, align 4, !tbaa !5
+  %21 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 13, i32 0
+  store i8 0, i8* %21, align 4, !tbaa !5
+  %22 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 14, i32 0
+  store i8 0, i8* %22, align 4, !tbaa !5
+  %23 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 15, i32 0
+  store i8 0, i8* %23, align 4, !tbaa !5
+  %24 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 16, i32 0
+  store i8 0, i8* %24, align 4, !tbaa !5
+  %25 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 17, i32 0
+  store i8 0, i8* %25, align 4, !tbaa !5
+  %26 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 18, i32 0
+  store i8 0, i8* %26, align 4, !tbaa !5
+  %27 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 19, i32 0
+  store i8 0, i8* %27, align 4, !tbaa !5
+  %28 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 20, i32 0
+  store i8 0, i8* %28, align 4, !tbaa !5
+  %29 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 21, i32 0
+  store i8 0, i8* %29, align 4, !tbaa !5
+  %30 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 22, i32 0
+  store i8 0, i8* %30, align 4, !tbaa !5
+  %31 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 23, i32 0
+  store i8 0, i8* %31, align 4, !tbaa !5
+  %32 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 24, i32 0
+  store i8 0, i8* %32, align 4, !tbaa !5
+  %33 = getelementptr inbounds %struct.Tile, %struct.Tile* %7, i64 25
+  %34 = icmp eq %struct.Tile* %33, %5
+  br i1 %34, label %35, label %6
 
-19:                                               ; preds = %15
-  %20 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %2, i32 0, i32 0
-  %21 = getelementptr inbounds %struct.Tile, %struct.Tile* %20, i64 10000
-  br label %22
+35:                                               ; preds = %6
+  %36 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %2, i64 0, i64 0, i32 0
+  call void @llvm.lifetime.start.p0i8(i64 120000, i8* nonnull %36) #5
+  %37 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %2, i64 0, i64 0
+  %38 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %2, i64 0, i64 10000
+  br label %39
 
-22:                                               ; preds = %22, %19
-  %23 = phi %struct.Tile* [ %20, %19 ], [ %24, %22 ]
-  call void @_ZN4TileC2Ev(%struct.Tile* noundef nonnull align 4 dereferenceable(28) %23) #5
-  %24 = getelementptr inbounds %struct.Tile, %struct.Tile* %23, i64 1
-  %25 = icmp eq %struct.Tile* %24, %21
-  br i1 %25, label %26, label %22
+39:                                               ; preds = %39, %35
+  %40 = phi %struct.Tile* [ %37, %35 ], [ %66, %39 ]
+  %41 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 0, i32 0
+  store i8 0, i8* %41, align 4, !tbaa !5
+  %42 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 1, i32 0
+  store i8 0, i8* %42, align 4, !tbaa !5
+  %43 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 2, i32 0
+  store i8 0, i8* %43, align 4, !tbaa !5
+  %44 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 3, i32 0
+  store i8 0, i8* %44, align 4, !tbaa !5
+  %45 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 4, i32 0
+  store i8 0, i8* %45, align 4, !tbaa !5
+  %46 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 5, i32 0
+  store i8 0, i8* %46, align 4, !tbaa !5
+  %47 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 6, i32 0
+  store i8 0, i8* %47, align 4, !tbaa !5
+  %48 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 7, i32 0
+  store i8 0, i8* %48, align 4, !tbaa !5
+  %49 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 8, i32 0
+  store i8 0, i8* %49, align 4, !tbaa !5
+  %50 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 9, i32 0
+  store i8 0, i8* %50, align 4, !tbaa !5
+  %51 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 10, i32 0
+  store i8 0, i8* %51, align 4, !tbaa !5
+  %52 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 11, i32 0
+  store i8 0, i8* %52, align 4, !tbaa !5
+  %53 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 12, i32 0
+  store i8 0, i8* %53, align 4, !tbaa !5
+  %54 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 13, i32 0
+  store i8 0, i8* %54, align 4, !tbaa !5
+  %55 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 14, i32 0
+  store i8 0, i8* %55, align 4, !tbaa !5
+  %56 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 15, i32 0
+  store i8 0, i8* %56, align 4, !tbaa !5
+  %57 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 16, i32 0
+  store i8 0, i8* %57, align 4, !tbaa !5
+  %58 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 17, i32 0
+  store i8 0, i8* %58, align 4, !tbaa !5
+  %59 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 18, i32 0
+  store i8 0, i8* %59, align 4, !tbaa !5
+  %60 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 19, i32 0
+  store i8 0, i8* %60, align 4, !tbaa !5
+  %61 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 20, i32 0
+  store i8 0, i8* %61, align 4, !tbaa !5
+  %62 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 21, i32 0
+  store i8 0, i8* %62, align 4, !tbaa !5
+  %63 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 22, i32 0
+  store i8 0, i8* %63, align 4, !tbaa !5
+  %64 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 23, i32 0
+  store i8 0, i8* %64, align 4, !tbaa !5
+  %65 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 24, i32 0
+  store i8 0, i8* %65, align 4, !tbaa !5
+  %66 = getelementptr inbounds %struct.Tile, %struct.Tile* %40, i64 25
+  %67 = icmp eq %struct.Tile* %66, %38
+  br i1 %67, label %68, label %39
 
-26:                                               ; preds = %22
-  %27 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 0
-  store %struct.Tile* %27, %struct.Tile** %3, align 8
-  %28 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %2, i64 0, i64 0
-  store %struct.Tile* %28, %struct.Tile** %4, align 8
-  %29 = bitcast %struct.RGB* %5 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %29, i8* align 4 bitcast (%struct.RGB* @__const._Z5main_v.default_rgb to i8*), i64 16, i1 false)
-  store i32 0, i32* %6, align 4
-  br label %30
+68:                                               ; preds = %39, %70
+  %69 = phi i32 [ %71, %70 ], [ 0, %39 ]
+  br label %73
 
-30:                                               ; preds = %97, %26
-  %31 = load i32, i32* %6, align 4
-  %32 = icmp slt i32 %31, 100
-  br i1 %32, label %33, label %100
+70:                                               ; preds = %92
+  %71 = add nuw nsw i32 %69, 1
+  %72 = icmp eq i32 %71, 100
+  br i1 %72, label %96, label %68, !llvm.loop !11
 
-33:                                               ; preds = %30
-  store i32 0, i32* %7, align 4
-  br label %34
+73:                                               ; preds = %68, %92
+  %74 = phi i32 [ 0, %68 ], [ %94, %92 ]
+  %75 = call noundef i32 @_Z9next_randv()
+  %76 = srem i32 %75, 50
+  %77 = icmp eq i32 %76, 0
+  br i1 %77, label %78, label %92
 
-34:                                               ; preds = %93, %33
-  %35 = load i32, i32* %7, align 4
-  %36 = icmp slt i32 %35, 100
-  br i1 %36, label %37, label %96
+78:                                               ; preds = %73
+  %79 = mul nsw i32 %74, 100
+  %80 = add nsw i32 %79, %69
+  %81 = add nsw i32 %80, -1
+  %82 = sext i32 %81 to i64
+  %83 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 %82, i32 0
+  %84 = load i8, i8* %83, align 4, !tbaa !5, !range !13
+  %85 = icmp eq i8 %84, 0
+  br i1 %85, label %86, label %92
 
-37:                                               ; preds = %34
-  %38 = call noundef i32 @_Z9next_randv()
-  %39 = srem i32 %38, 50
-  %40 = icmp eq i32 %39, 0
-  br i1 %40, label %41, label %92
-
-41:                                               ; preds = %37
-  %42 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %43 = load i32, i32* %7, align 4
-  %44 = mul nsw i32 %43, 100
-  %45 = load i32, i32* %6, align 4
-  %46 = add nsw i32 %44, %45
-  %47 = sub nsw i32 %46, 1
-  %48 = sext i32 %47 to i64
-  %49 = getelementptr inbounds %struct.Tile, %struct.Tile* %42, i64 %48
-  %50 = getelementptr inbounds %struct.Tile, %struct.Tile* %49, i32 0, i32 0
-  %51 = load i8, i8* %50, align 4
-  %52 = trunc i8 %51 to i1
-  br i1 %52, label %92, label %53
-
-53:                                               ; preds = %41
-  %54 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %55 = load i32, i32* %7, align 4
-  %56 = mul nsw i32 %55, 100
-  %57 = load i32, i32* %6, align 4
-  %58 = add nsw i32 %56, %57
-  %59 = sext i32 %58 to i64
-  %60 = getelementptr inbounds %struct.Tile, %struct.Tile* %54, i64 %59
-  %61 = getelementptr inbounds %struct.Tile, %struct.Tile* %60, i32 0, i32 0
-  store i8 1, i8* %61, align 4
-  %62 = load i32, i32* %6, align 4
-  %63 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %64 = load i32, i32* %7, align 4
-  %65 = mul nsw i32 %64, 100
-  %66 = load i32, i32* %6, align 4
-  %67 = add nsw i32 %65, %66
-  %68 = sext i32 %67 to i64
-  %69 = getelementptr inbounds %struct.Tile, %struct.Tile* %63, i64 %68
-  %70 = getelementptr inbounds %struct.Tile, %struct.Tile* %69, i32 0, i32 1
-  store i32 %62, i32* %70, align 4
-  %71 = load i32, i32* %7, align 4
-  %72 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %73 = load i32, i32* %7, align 4
-  %74 = mul nsw i32 %73, 100
-  %75 = load i32, i32* %6, align 4
-  %76 = add nsw i32 %74, %75
-  %77 = sext i32 %76 to i64
-  %78 = getelementptr inbounds %struct.Tile, %struct.Tile* %72, i64 %77
-  %79 = getelementptr inbounds %struct.Tile, %struct.Tile* %78, i32 0, i32 2
-  store i32 %71, i32* %79, align 4
-  %80 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %81 = load i32, i32* %7, align 4
-  %82 = mul nsw i32 %81, 100
-  %83 = load i32, i32* %6, align 4
-  %84 = add nsw i32 %82, %83
-  %85 = sext i32 %84 to i64
-  %86 = getelementptr inbounds %struct.Tile, %struct.Tile* %80, i64 %85
-  %87 = getelementptr inbounds %struct.Tile, %struct.Tile* %86, i32 0, i32 3
-  %88 = bitcast %struct.RGB* %87 to i8*
-  %89 = bitcast %struct.RGB* %5 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %88, i8* align 4 %89, i64 16, i1 false)
-  %90 = load i32, i32* %7, align 4
-  %91 = add nsw i32 %90, 1
-  store i32 %91, i32* %7, align 4
+86:                                               ; preds = %78
+  %87 = sext i32 %80 to i64
+  %88 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 %87, i32 0
+  store i8 1, i8* %88, align 4, !tbaa !5
+  %89 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 %87, i32 1
+  store i32 %69, i32* %89, align 4, !tbaa !14
+  %90 = getelementptr inbounds [10000 x %struct.Tile], [10000 x %struct.Tile]* %1, i64 0, i64 %87, i32 2
+  store i32 %74, i32* %90, align 4, !tbaa !15
+  %91 = add nsw i32 %74, 1
   br label %92
 
-92:                                               ; preds = %53, %41, %37
-  br label %93
+92:                                               ; preds = %73, %78, %86
+  %93 = phi i32 [ %74, %78 ], [ %91, %86 ], [ %74, %73 ]
+  %94 = add nsw i32 %93, 1
+  %95 = icmp slt i32 %93, 99
+  br i1 %95, label %73, label %70, !llvm.loop !16
 
-93:                                               ; preds = %92
-  %94 = load i32, i32* %7, align 4
-  %95 = add nsw i32 %94, 1
-  store i32 %95, i32* %7, align 4
-  br label %34, !llvm.loop !6
+96:                                               ; preds = %70, %145
+  %97 = phi %struct.Tile* [ %99, %145 ], [ %4, %70 ]
+  %98 = phi i32 [ %146, %145 ], [ 0, %70 ]
+  %99 = phi %struct.Tile* [ %97, %145 ], [ %37, %70 ]
+  %100 = call noundef zeroext i1 @_Z9interruptv()
+  br i1 %100, label %166, label %101
 
-96:                                               ; preds = %34
-  br label %97
+101:                                              ; preds = %96, %148
+  %102 = phi i64 [ %149, %148 ], [ 0, %96 ]
+  br label %151
 
-97:                                               ; preds = %96
-  %98 = load i32, i32* %6, align 4
-  %99 = add nsw i32 %98, 1
-  store i32 %99, i32* %6, align 4
-  br label %30, !llvm.loop !8
+103:                                              ; preds = %148, %106
+  %104 = phi i64 [ %107, %106 ], [ 0, %148 ]
+  %105 = trunc i64 %104 to i32
+  br label %109
 
-100:                                              ; preds = %30
-  store i32 0, i32* %8, align 4
-  br label %101
+106:                                              ; preds = %142
+  %107 = add nuw nsw i64 %104, 1
+  %108 = icmp eq i64 %107, 100
+  br i1 %108, label %145, label %103, !llvm.loop !17
 
-101:                                              ; preds = %138, %100
-  %102 = load i32, i32* %8, align 4
-  %103 = icmp slt i32 %102, 200
-  br i1 %103, label %104, label %141
+109:                                              ; preds = %142, %103
+  %110 = phi i64 [ 0, %103 ], [ %143, %142 ]
+  %111 = mul nuw nsw i64 %110, 100
+  %112 = add nuw nsw i64 %111, %104
+  %113 = getelementptr inbounds %struct.Tile, %struct.Tile* %97, i64 %112, i32 0
+  %114 = load i8, i8* %113, align 4, !tbaa !5, !range !13
+  %115 = icmp eq i8 %114, 0
+  br i1 %115, label %142, label %116
 
-104:                                              ; preds = %101
-  %105 = call noundef zeroext i1 @_Z9interruptv()
-  br i1 %105, label %106, label %107
+116:                                              ; preds = %109
+  %117 = call noundef i32 @_Z9next_randv()
+  %118 = and i32 %117, 1
+  %119 = icmp eq i32 %118, 0
+  %120 = call noundef i32 @_Z9next_randv()
+  %121 = srem i32 %120, 2
+  %122 = shl nsw i32 %121, 1
+  br i1 %119, label %128, label %123
 
-106:                                              ; preds = %104
-  br label %141
+123:                                              ; preds = %116
+  %124 = add nsw i32 %122, 99
+  %125 = add i32 %124, %105
+  %126 = srem i32 %125, 100
+  %127 = trunc i64 %110 to i32
+  br label %133
 
-107:                                              ; preds = %104
-  store i32 0, i32* %9, align 4
-  br label %108
+128:                                              ; preds = %116
+  %129 = trunc i64 %110 to i32
+  %130 = add nsw i32 %122, 99
+  %131 = add i32 %130, %129
+  %132 = srem i32 %131, 100
+  br label %133
 
-108:                                              ; preds = %129, %107
-  %109 = load i32, i32* %9, align 4
-  %110 = icmp slt i32 %109, 100
-  br i1 %110, label %111, label %132
-
-111:                                              ; preds = %108
-  store i32 0, i32* %10, align 4
-  br label %112
-
-112:                                              ; preds = %125, %111
-  %113 = load i32, i32* %10, align 4
-  %114 = icmp slt i32 %113, 100
-  br i1 %114, label %115, label %128
-
-115:                                              ; preds = %112
-  %116 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %117 = load i32, i32* %10, align 4
-  %118 = mul nsw i32 %117, 100
-  %119 = load i32, i32* %9, align 4
-  %120 = add nsw i32 %118, %119
-  %121 = sext i32 %120 to i64
-  %122 = getelementptr inbounds %struct.Tile, %struct.Tile* %116, i64 %121
-  %123 = bitcast %struct.Tile* %11 to i8*
-  %124 = bitcast %struct.Tile* %122 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %123, i8* align 4 %124, i64 28, i1 false)
-  call void @_Z7putTile4Tile(%struct.Tile* noundef byval(%struct.Tile) align 8 %11)
-  br label %125
-
-125:                                              ; preds = %115
-  %126 = load i32, i32* %10, align 4
-  %127 = add nsw i32 %126, 1
-  store i32 %127, i32* %10, align 4
-  br label %112, !llvm.loop !9
-
-128:                                              ; preds = %112
-  br label %129
-
-129:                                              ; preds = %128
-  %130 = load i32, i32* %9, align 4
-  %131 = add nsw i32 %130, 1
-  store i32 %131, i32* %9, align 4
-  br label %108, !llvm.loop !10
-
-132:                                              ; preds = %108
-  %133 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %134 = load %struct.Tile*, %struct.Tile** %4, align 8
-  call void @_Z8loadNextP4TileS0_(%struct.Tile* noundef %133, %struct.Tile* noundef %134)
-  %135 = load %struct.Tile*, %struct.Tile** %3, align 8
-  store %struct.Tile* %135, %struct.Tile** %12, align 8
-  %136 = load %struct.Tile*, %struct.Tile** %4, align 8
-  store %struct.Tile* %136, %struct.Tile** %3, align 8
-  %137 = load %struct.Tile*, %struct.Tile** %12, align 8
-  store %struct.Tile* %137, %struct.Tile** %4, align 8
-  call void @_Z5flushv()
-  br label %138
-
-138:                                              ; preds = %132
-  %139 = load i32, i32* %8, align 4
-  %140 = add nsw i32 %139, 1
-  store i32 %140, i32* %8, align 4
-  br label %101, !llvm.loop !11
-
-141:                                              ; preds = %106, %101
-  ret void
-}
-
-; Function Attrs: noinline nounwind optnone uwtable
-define linkonce_odr dso_local void @_ZN4TileC2Ev(%struct.Tile* noundef nonnull align 4 dereferenceable(28) %0) unnamed_addr #1 comdat align 2 {
-  %2 = alloca %struct.Tile*, align 8
-  store %struct.Tile* %0, %struct.Tile** %2, align 8
-  %3 = load %struct.Tile*, %struct.Tile** %2, align 8
-  %4 = getelementptr inbounds %struct.Tile, %struct.Tile* %3, i32 0, i32 0
-  store i8 0, i8* %4, align 4
-  %5 = getelementptr inbounds %struct.Tile, %struct.Tile* %3, i32 0, i32 1
-  store i32 0, i32* %5, align 4
-  %6 = getelementptr inbounds %struct.Tile, %struct.Tile* %3, i32 0, i32 2
-  store i32 0, i32* %6, align 4
-  %7 = getelementptr inbounds %struct.Tile, %struct.Tile* %3, i32 0, i32 3
-  %8 = getelementptr inbounds %struct.RGB, %struct.RGB* %7, i32 0, i32 0
-  store i32 0, i32* %8, align 4
-  %9 = getelementptr inbounds %struct.RGB, %struct.RGB* %7, i32 0, i32 1
-  store i32 0, i32* %9, align 4
-  %10 = getelementptr inbounds %struct.RGB, %struct.RGB* %7, i32 0, i32 2
-  store i32 0, i32* %10, align 4
-  %11 = getelementptr inbounds %struct.RGB, %struct.RGB* %7, i32 0, i32 3
-  store i32 0, i32* %11, align 4
-  ret void
-}
-
-; Function Attrs: argmemonly nofree nounwind willreturn
-declare void @llvm.memcpy.p0i8.p0i8.i64(i8* noalias nocapture writeonly, i8* noalias nocapture readonly, i64, i1 immarg) #2
-
-declare noundef i32 @_Z9next_randv() #3
-
-declare noundef zeroext i1 @_Z9interruptv() #3
-
-; Function Attrs: mustprogress noinline optnone uwtable
-define dso_local void @_Z7putTile4Tile(%struct.Tile* noundef byval(%struct.Tile) align 8 %0) #0 {
-  %2 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 0
-  %3 = load i8, i8* %2, align 8
-  %4 = trunc i8 %3 to i1
-  br i1 %4, label %5, label %22
-
-5:                                                ; preds = %1
-  %6 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 1
-  %7 = load i32, i32* %6, align 4
-  %8 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 2
-  %9 = load i32, i32* %8, align 8
-  %10 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 3
-  %11 = getelementptr inbounds %struct.RGB, %struct.RGB* %10, i32 0, i32 0
-  %12 = load i32, i32* %11, align 4
-  %13 = trunc i32 %12 to i8
-  %14 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 3
-  %15 = getelementptr inbounds %struct.RGB, %struct.RGB* %14, i32 0, i32 1
-  %16 = load i32, i32* %15, align 4
-  %17 = trunc i32 %16 to i8
-  %18 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i32 0, i32 3
-  %19 = getelementptr inbounds %struct.RGB, %struct.RGB* %18, i32 0, i32 2
-  %20 = load i32, i32* %19, align 4
-  %21 = trunc i32 %20 to i8
-  call void @_Z7putTileiihhhh(i32 noundef %7, i32 noundef %9, i8 noundef zeroext %13, i8 noundef zeroext %17, i8 noundef zeroext %21, i8 noundef zeroext -1)
-  br label %22
-
-22:                                               ; preds = %5, %1
-  ret void
-}
-
-; Function Attrs: mustprogress noinline optnone uwtable
-define dso_local void @_Z8loadNextP4TileS0_(%struct.Tile* noundef %0, %struct.Tile* noundef %1) #0 {
-  %3 = alloca %struct.Tile*, align 8
-  %4 = alloca %struct.Tile*, align 8
-  %5 = alloca i32, align 4
-  %6 = alloca i32, align 4
-  %7 = alloca i32, align 4
-  %8 = alloca i32, align 4
-  %9 = alloca i32, align 4
-  %10 = alloca i8, align 1
-  %11 = alloca %struct.RGB, align 4
-  %12 = alloca %struct.RGB, align 4
-  %13 = alloca %struct.RGB, align 4
-  store %struct.Tile* %0, %struct.Tile** %3, align 8
-  store %struct.Tile* %1, %struct.Tile** %4, align 8
-  store i32 0, i32* %5, align 4
-  br label %14
-
-14:                                               ; preds = %157, %2
-  %15 = load i32, i32* %5, align 4
-  %16 = icmp slt i32 %15, 100
-  br i1 %16, label %17, label %160
-
-17:                                               ; preds = %14
-  store i32 0, i32* %6, align 4
-  br label %18
-
-18:                                               ; preds = %153, %17
-  %19 = load i32, i32* %6, align 4
-  %20 = icmp slt i32 %19, 100
-  br i1 %20, label %21, label %156
-
-21:                                               ; preds = %18
-  %22 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %23 = load i32, i32* %6, align 4
-  %24 = mul nsw i32 %23, 100
-  %25 = load i32, i32* %5, align 4
-  %26 = add nsw i32 %24, %25
-  %27 = sext i32 %26 to i64
-  %28 = getelementptr inbounds %struct.Tile, %struct.Tile* %22, i64 %27
-  %29 = getelementptr inbounds %struct.Tile, %struct.Tile* %28, i32 0, i32 0
-  %30 = load i8, i8* %29, align 4
-  %31 = trunc i8 %30 to i1
-  br i1 %31, label %32, label %144
-
-32:                                               ; preds = %21
-  %33 = load i32, i32* %5, align 4
-  store i32 %33, i32* %7, align 4
-  %34 = load i32, i32* %6, align 4
-  store i32 %34, i32* %8, align 4
-  %35 = call noundef i32 @_Z9next_randv()
-  %36 = srem i32 %35, 2
-  %37 = icmp ne i32 %36, 0
-  br i1 %37, label %38, label %47
-
-38:                                               ; preds = %32
-  %39 = load i32, i32* %5, align 4
-  %40 = add nsw i32 100, %39
-  %41 = call noundef i32 @_Z9next_randv()
-  %42 = srem i32 %41, 2
-  %43 = mul nsw i32 %42, 2
-  %44 = add nsw i32 %40, %43
-  %45 = sub nsw i32 %44, 1
-  %46 = srem i32 %45, 100
-  store i32 %46, i32* %7, align 4
-  br label %56
-
-47:                                               ; preds = %32
-  %48 = load i32, i32* %6, align 4
-  %49 = add nsw i32 100, %48
-  %50 = call noundef i32 @_Z9next_randv()
-  %51 = srem i32 %50, 2
-  %52 = mul nsw i32 %51, 2
-  %53 = add nsw i32 %49, %52
-  %54 = sub nsw i32 %53, 1
-  %55 = srem i32 %54, 100
-  store i32 %55, i32* %8, align 4
-  br label %56
-
-56:                                               ; preds = %47, %38
-  %57 = load i32, i32* %8, align 4
-  %58 = mul nsw i32 %57, 100
-  %59 = load i32, i32* %7, align 4
-  %60 = add nsw i32 %58, %59
-  store i32 %60, i32* %9, align 4
-  %61 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %62 = load i32, i32* %9, align 4
-  %63 = sext i32 %62 to i64
-  %64 = getelementptr inbounds %struct.Tile, %struct.Tile* %61, i64 %63
-  %65 = getelementptr inbounds %struct.Tile, %struct.Tile* %64, i32 0, i32 0
-  %66 = load i8, i8* %65, align 4
-  %67 = trunc i8 %66 to i1
-  %68 = zext i1 %67 to i8
-  store i8 %68, i8* %10, align 1
-  %69 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %70 = load i32, i32* %9, align 4
-  %71 = sext i32 %70 to i64
-  %72 = getelementptr inbounds %struct.Tile, %struct.Tile* %69, i64 %71
-  %73 = getelementptr inbounds %struct.Tile, %struct.Tile* %72, i32 0, i32 3
-  %74 = bitcast %struct.RGB* %11 to i8*
-  %75 = bitcast %struct.RGB* %73 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %74, i8* align 4 %75, i64 16, i1 false)
-  %76 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %77 = load i32, i32* %6, align 4
-  %78 = mul nsw i32 %77, 100
-  %79 = load i32, i32* %5, align 4
-  %80 = add nsw i32 %78, %79
-  %81 = sext i32 %80 to i64
-  %82 = getelementptr inbounds %struct.Tile, %struct.Tile* %76, i64 %81
-  %83 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %84 = load i32, i32* %9, align 4
-  %85 = sext i32 %84 to i64
-  %86 = getelementptr inbounds %struct.Tile, %struct.Tile* %83, i64 %85
-  %87 = bitcast %struct.Tile* %86 to i8*
-  %88 = bitcast %struct.Tile* %82 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %87, i8* align 4 %88, i64 28, i1 false)
-  %89 = load i32, i32* %7, align 4
-  %90 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %91 = load i32, i32* %9, align 4
-  %92 = sext i32 %91 to i64
-  %93 = getelementptr inbounds %struct.Tile, %struct.Tile* %90, i64 %92
-  %94 = getelementptr inbounds %struct.Tile, %struct.Tile* %93, i32 0, i32 1
-  store i32 %89, i32* %94, align 4
-  %95 = load i32, i32* %8, align 4
-  %96 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %97 = load i32, i32* %9, align 4
-  %98 = sext i32 %97 to i64
-  %99 = getelementptr inbounds %struct.Tile, %struct.Tile* %96, i64 %98
-  %100 = getelementptr inbounds %struct.Tile, %struct.Tile* %99, i32 0, i32 2
-  store i32 %95, i32* %100, align 4
-  %101 = load i8, i8* %10, align 1
-  %102 = trunc i8 %101 to i1
-  br i1 %102, label %103, label %143
-
-103:                                              ; preds = %56
-  %104 = getelementptr inbounds %struct.RGB, %struct.RGB* %11, i32 0, i32 3
-  %105 = load i32, i32* %104, align 4
-  %106 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %107 = load i32, i32* %9, align 4
-  %108 = sext i32 %107 to i64
-  %109 = getelementptr inbounds %struct.Tile, %struct.Tile* %106, i64 %108
-  %110 = getelementptr inbounds %struct.Tile, %struct.Tile* %109, i32 0, i32 3
-  %111 = getelementptr inbounds %struct.RGB, %struct.RGB* %110, i32 0, i32 3
-  %112 = load i32, i32* %111, align 4
-  %113 = icmp sgt i32 %105, %112
-  br i1 %113, label %114, label %115
-
-114:                                              ; preds = %103
-  br label %121
-
-115:                                              ; preds = %103
-  %116 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %117 = load i32, i32* %9, align 4
-  %118 = sext i32 %117 to i64
-  %119 = getelementptr inbounds %struct.Tile, %struct.Tile* %116, i64 %118
-  %120 = getelementptr inbounds %struct.Tile, %struct.Tile* %119, i32 0, i32 3
-  br label %121
-
-121:                                              ; preds = %115, %114
-  %122 = phi %struct.RGB* [ %11, %114 ], [ %120, %115 ]
-  %123 = bitcast %struct.RGB* %13 to i8*
-  %124 = bitcast %struct.RGB* %122 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %123, i8* align 4 %124, i64 16, i1 false)
-  %125 = bitcast %struct.RGB* %13 to { i64, i64 }*
-  %126 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %125, i32 0, i32 0
-  %127 = load i64, i64* %126, align 4
-  %128 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %125, i32 0, i32 1
-  %129 = load i64, i64* %128, align 4
-  %130 = call { i64, i64 } @_Z7nextRGB3RGB(i64 %127, i64 %129)
-  %131 = bitcast %struct.RGB* %12 to { i64, i64 }*
-  %132 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %131, i32 0, i32 0
-  %133 = extractvalue { i64, i64 } %130, 0
-  store i64 %133, i64* %132, align 4
-  %134 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %131, i32 0, i32 1
-  %135 = extractvalue { i64, i64 } %130, 1
-  store i64 %135, i64* %134, align 4
-  %136 = load %struct.Tile*, %struct.Tile** %4, align 8
-  %137 = load i32, i32* %9, align 4
+133:                                              ; preds = %128, %123
+  %134 = phi i32 [ %126, %123 ], [ %105, %128 ]
+  %135 = phi i32 [ %127, %123 ], [ %132, %128 ]
+  %136 = mul nsw i32 %135, 100
+  %137 = add nsw i32 %136, %134
   %138 = sext i32 %137 to i64
-  %139 = getelementptr inbounds %struct.Tile, %struct.Tile* %136, i64 %138
-  %140 = getelementptr inbounds %struct.Tile, %struct.Tile* %139, i32 0, i32 3
-  %141 = bitcast %struct.RGB* %140 to i8*
-  %142 = bitcast %struct.RGB* %12 to i8*
-  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %141, i8* align 4 %142, i64 16, i1 false)
-  br label %143
+  %139 = getelementptr inbounds %struct.Tile, %struct.Tile* %99, i64 %138, i32 0
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* noundef nonnull align 4 dereferenceable(12) %139, i8* noundef nonnull align 4 dereferenceable(12) %113, i64 12, i1 false), !tbaa.struct !18
+  %140 = getelementptr inbounds %struct.Tile, %struct.Tile* %99, i64 %138, i32 1
+  store i32 %134, i32* %140, align 4, !tbaa !14
+  %141 = getelementptr inbounds %struct.Tile, %struct.Tile* %99, i64 %138, i32 2
+  store i32 %135, i32* %141, align 4, !tbaa !15
+  br label %142
 
-143:                                              ; preds = %121, %56
-  br label %144
+142:                                              ; preds = %133, %109
+  store i8 0, i8* %113, align 4, !tbaa !5
+  %143 = add nuw nsw i64 %110, 1
+  %144 = icmp eq i64 %143, 100
+  br i1 %144, label %106, label %109, !llvm.loop !21
 
-144:                                              ; preds = %143, %21
-  %145 = load %struct.Tile*, %struct.Tile** %3, align 8
-  %146 = load i32, i32* %6, align 4
-  %147 = mul nsw i32 %146, 100
-  %148 = load i32, i32* %5, align 4
-  %149 = add nsw i32 %147, %148
-  %150 = sext i32 %149 to i64
-  %151 = getelementptr inbounds %struct.Tile, %struct.Tile* %145, i64 %150
-  %152 = getelementptr inbounds %struct.Tile, %struct.Tile* %151, i32 0, i32 0
-  store i8 0, i8* %152, align 4
-  br label %153
+145:                                              ; preds = %106
+  call void @_Z5flushv()
+  %146 = add nuw nsw i32 %98, 1
+  %147 = icmp eq i32 %146, 200
+  br i1 %147, label %166, label %96, !llvm.loop !22
 
-153:                                              ; preds = %144
-  %154 = load i32, i32* %6, align 4
-  %155 = add nsw i32 %154, 1
-  store i32 %155, i32* %6, align 4
-  br label %18, !llvm.loop !12
+148:                                              ; preds = %163
+  %149 = add nuw nsw i64 %102, 1
+  %150 = icmp eq i64 %149, 100
+  br i1 %150, label %103, label %101, !llvm.loop !23
 
-156:                                              ; preds = %18
-  br label %157
+151:                                              ; preds = %101, %163
+  %152 = phi i64 [ 0, %101 ], [ %164, %163 ]
+  %153 = mul nuw nsw i64 %152, 100
+  %154 = add nuw nsw i64 %153, %102
+  %155 = getelementptr inbounds %struct.Tile, %struct.Tile* %97, i64 %154, i32 0
+  %156 = load i8, i8* %155, align 4, !tbaa !5, !range !13
+  %157 = icmp eq i8 %156, 0
+  br i1 %157, label %163, label %158
 
-157:                                              ; preds = %156
-  %158 = load i32, i32* %5, align 4
-  %159 = add nsw i32 %158, 1
-  store i32 %159, i32* %5, align 4
-  br label %14, !llvm.loop !13
+158:                                              ; preds = %151
+  %159 = getelementptr inbounds %struct.Tile, %struct.Tile* %97, i64 %154, i32 1
+  %160 = load i32, i32* %159, align 4, !tbaa !14
+  %161 = getelementptr inbounds %struct.Tile, %struct.Tile* %97, i64 %154, i32 2
+  %162 = load i32, i32* %161, align 4, !tbaa !15
+  call void @_Z7putTileiiiiii(i32 noundef %160, i32 noundef %162, i32 noundef 100, i32 noundef 100, i32 noundef 100, i32 noundef 255)
+  br label %163
 
-160:                                              ; preds = %14
+163:                                              ; preds = %151, %158
+  %164 = add nuw nsw i64 %152, 1
+  %165 = icmp eq i64 %164, 100
+  br i1 %165, label %148, label %151, !llvm.loop !24
+
+166:                                              ; preds = %96, %145
+  call void @llvm.lifetime.end.p0i8(i64 120000, i8* nonnull %36) #5
+  call void @llvm.lifetime.end.p0i8(i64 120000, i8* nonnull %3) #5
   ret void
 }
 
-declare void @_Z5flushv() #3
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.start.p0i8(i64 immarg, i8* nocapture) #1
 
-; Function Attrs: mustprogress noinline nounwind optnone uwtable
-define dso_local { i64, i64 } @_Z7nextRGB3RGB(i64 %0, i64 %1) #4 {
-  %3 = alloca %struct.RGB, align 4
-  %4 = alloca %struct.RGB, align 4
-  %5 = bitcast %struct.RGB* %4 to { i64, i64 }*
-  %6 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %5, i32 0, i32 0
-  store i64 %0, i64* %6, align 4
-  %7 = getelementptr inbounds { i64, i64 }, { i64, i64 }* %5, i32 0, i32 1
-  store i64 %1, i64* %7, align 4
-  %8 = getelementptr inbounds %struct.RGB, %struct.RGB* %3, i32 0, i32 0
-  %9 = getelementptr inbounds %struct.RGB, %struct.RGB* %4, i32 0, i32 0
-  %10 = load i32, i32* %9, align 4
-  %11 = add nsw i32 %10, 19
-  store i32 %11, i32* %8, align 4
-  %12 = getelementptr inbounds %struct.RGB, %struct.RGB* %3, i32 0, i32 1
-  %13 = getelementptr inbounds %struct.RGB, %struct.RGB* %4, i32 0, i32 1
-  %14 = load i32, i32* %13, align 4
-  %15 = add nsw i32 %14, 18
-  store i32 %15, i32* %12, align 4
-  %16 = getelementptr inbounds %struct.RGB, %struct.RGB* %3, i32 0, i32 2
-  %17 = getelementptr inbounds %struct.RGB, %struct.RGB* %4, i32 0, i32 2
-  %18 = load i32, i32* %17, align 4
-  %19 = add nsw i32 %18, -12
-  store i32 %19, i32* %16, align 4
-  %20 = getelementptr inbounds %struct.RGB, %struct.RGB* %3, i32 0, i32 3
-  %21 = getelementptr inbounds %struct.RGB, %struct.RGB* %4, i32 0, i32 3
-  %22 = load i32, i32* %21, align 4
-  %23 = add nsw i32 %22, 1
-  store i32 %23, i32* %20, align 4
-  %24 = bitcast %struct.RGB* %3 to { i64, i64 }*
-  %25 = load { i64, i64 }, { i64, i64 }* %24, align 4
-  ret { i64, i64 } %25
+declare noundef i32 @_Z9next_randv() local_unnamed_addr #2
+
+; Function Attrs: argmemonly mustprogress nofree nosync nounwind willreturn
+declare void @llvm.lifetime.end.p0i8(i64 immarg, i8* nocapture) #1
+
+declare noundef zeroext i1 @_Z9interruptv() local_unnamed_addr #2
+
+declare void @_Z7putTileiiiiii(i32 noundef, i32 noundef, i32 noundef, i32 noundef, i32 noundef, i32 noundef) local_unnamed_addr #2
+
+; Function Attrs: mustprogress uwtable
+define dso_local void @_Z8loadNextP4TileS0_(%struct.Tile* nocapture noundef %0, %struct.Tile* nocapture noundef writeonly %1) local_unnamed_addr #3 {
+  br label %3
+
+3:                                                ; preds = %2, %9
+  %4 = phi i64 [ 0, %2 ], [ %10, %9 ]
+  %5 = trunc i64 %4 to i32
+  %6 = trunc i64 %4 to i32
+  %7 = add i32 %6, 99
+  br label %12
+
+8:                                                ; preds = %9
+  ret void
+
+9:                                                ; preds = %44
+  %10 = add nuw nsw i64 %4, 1
+  %11 = icmp eq i64 %10, 100
+  br i1 %11, label %8, label %3, !llvm.loop !17
+
+12:                                               ; preds = %3, %44
+  %13 = phi i64 [ 0, %3 ], [ %45, %44 ]
+  %14 = mul nuw nsw i64 %13, 100
+  %15 = add nuw nsw i64 %14, %4
+  %16 = getelementptr inbounds %struct.Tile, %struct.Tile* %0, i64 %15, i32 0
+  %17 = load i8, i8* %16, align 4, !tbaa !5, !range !13
+  %18 = icmp eq i8 %17, 0
+  br i1 %18, label %44, label %19
+
+19:                                               ; preds = %12
+  %20 = tail call noundef i32 @_Z9next_randv()
+  %21 = and i32 %20, 1
+  %22 = icmp eq i32 %21, 0
+  %23 = tail call noundef i32 @_Z9next_randv()
+  %24 = srem i32 %23, 2
+  %25 = shl nsw i32 %24, 1
+  br i1 %22, label %30, label %26
+
+26:                                               ; preds = %19
+  %27 = add i32 %7, %25
+  %28 = srem i32 %27, 100
+  %29 = trunc i64 %13 to i32
+  br label %35
+
+30:                                               ; preds = %19
+  %31 = trunc i64 %13 to i32
+  %32 = add i32 %31, 99
+  %33 = add i32 %32, %25
+  %34 = srem i32 %33, 100
+  br label %35
+
+35:                                               ; preds = %30, %26
+  %36 = phi i32 [ %28, %26 ], [ %5, %30 ]
+  %37 = phi i32 [ %29, %26 ], [ %34, %30 ]
+  %38 = mul nsw i32 %37, 100
+  %39 = add nsw i32 %38, %36
+  %40 = sext i32 %39 to i64
+  %41 = getelementptr inbounds %struct.Tile, %struct.Tile* %1, i64 %40, i32 0
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* noundef nonnull align 4 dereferenceable(12) %41, i8* noundef nonnull align 4 dereferenceable(12) %16, i64 12, i1 false), !tbaa.struct !18
+  %42 = getelementptr inbounds %struct.Tile, %struct.Tile* %1, i64 %40, i32 1
+  store i32 %36, i32* %42, align 4, !tbaa !14
+  %43 = getelementptr inbounds %struct.Tile, %struct.Tile* %1, i64 %40, i32 2
+  store i32 %37, i32* %43, align 4, !tbaa !15
+  br label %44
+
+44:                                               ; preds = %35, %12
+  store i8 0, i8* %16, align 4, !tbaa !5
+  %45 = add nuw nsw i64 %13, 1
+  %46 = icmp eq i64 %45, 100
+  br i1 %46, label %9, label %12, !llvm.loop !21
 }
 
-declare void @_Z7putTileiihhhh(i32 noundef, i32 noundef, i8 noundef zeroext, i8 noundef zeroext, i8 noundef zeroext, i8 noundef zeroext) #3
+declare void @_Z5flushv() local_unnamed_addr #2
 
-attributes #0 = { mustprogress noinline optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
-attributes #1 = { noinline nounwind optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
-attributes #2 = { argmemonly nofree nounwind willreturn }
-attributes #3 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
-attributes #4 = { mustprogress noinline nounwind optnone uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+; Function Attrs: argmemonly mustprogress nofree nounwind willreturn
+declare void @llvm.memcpy.p0i8.p0i8.i64(i8* noalias nocapture writeonly, i8* noalias nocapture readonly, i64, i1 immarg) #4
+
+attributes #0 = { uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { argmemonly mustprogress nofree nosync nounwind willreturn }
+attributes #2 = { "frame-pointer"="none" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #3 = { mustprogress uwtable "frame-pointer"="none" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { argmemonly mustprogress nofree nounwind willreturn }
 attributes #5 = { nounwind }
 
-!llvm.module.flags = !{!0, !1, !2, !3, !4}
-!llvm.ident = !{!5}
+!llvm.module.flags = !{!0, !1, !2, !3}
+!llvm.ident = !{!4}
 
 !0 = !{i32 1, !"wchar_size", i32 4}
 !1 = !{i32 7, !"PIC Level", i32 2}
 !2 = !{i32 7, !"PIE Level", i32 2}
 !3 = !{i32 7, !"uwtable", i32 1}
-!4 = !{i32 7, !"frame-pointer", i32 2}
-!5 = !{!"Ubuntu clang version 14.0.0-1ubuntu1.1"}
-!6 = distinct !{!6, !7}
-!7 = !{!"llvm.loop.mustprogress"}
-!8 = distinct !{!8, !7}
-!9 = distinct !{!9, !7}
-!10 = distinct !{!10, !7}
-!11 = distinct !{!11, !7}
-!12 = distinct !{!12, !7}
-!13 = distinct !{!13, !7}
+!4 = !{!"Ubuntu clang version 14.0.0-1ubuntu1.1"}
+!5 = !{!6, !7, i64 0}
+!6 = !{!"_ZTS4Tile", !7, i64 0, !10, i64 4, !10, i64 8}
+!7 = !{!"bool", !8, i64 0}
+!8 = !{!"omnipotent char", !9, i64 0}
+!9 = !{!"Simple C++ TBAA"}
+!10 = !{!"int", !8, i64 0}
+!11 = distinct !{!11, !12}
+!12 = !{!"llvm.loop.mustprogress"}
+!13 = !{i8 0, i8 2}
+!14 = !{!6, !10, i64 4}
+!15 = !{!6, !10, i64 8}
+!16 = distinct !{!16, !12}
+!17 = distinct !{!17, !12}
+!18 = !{i64 0, i64 1, !19, i64 4, i64 4, !20, i64 8, i64 4, !20}
+!19 = !{!7, !7, i64 0}
+!20 = !{!10, !10, i64 0}
+!21 = distinct !{!21, !12}
+!22 = distinct !{!22, !12}
+!23 = distinct !{!23, !12}
+!24 = distinct !{!24, !12}
